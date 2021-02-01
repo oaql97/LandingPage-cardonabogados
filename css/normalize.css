@@ -431,16 +431,15 @@ th {
   border-bottom-style: solid;
   border-bottom-width: 4px;
   border-bottom-color:#1db3ee;
-  width: 450px;
+  width: auto;
 }   
 .NAMES{
-  font-size: 2.5em;
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0%;
   margin-bottom: 0%;
   padding-top: 0%;
   margin-top: 0%;
-  height: 69px;
+  height: 40%;
 }
 .NAME{
   font-size: 2em;
