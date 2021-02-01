@@ -425,9 +425,37 @@ td,
 th {
   padding: 0;
 }
-
-/* Footer
+/* Ajustes Propios
    ========================================================================== */
+.azul{
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color:#1db3ee;
+  width: 450px;
+}   
+.NAMES{
+  font-size: 2.5em;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  padding-top: 0%;
+  margin-top: 0%;
+  height: 69px;
+}
+.NAME{
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+.SLOGAN{
+  font-size: 0.9em;
+  padding-top: 2%;
+  margin-top: 0%;
+  font-family: 'Roboto', sans-serif;
+}
 .footext{
   font-size: small;
+  padding-top: 1.5em;
 }
+
