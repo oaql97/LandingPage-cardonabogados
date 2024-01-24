@@ -65,3 +65,21 @@
     background: var(--color-oscuro-contraste);
   }
 }
+
+/* Detalle de la parte derecha inferior */
+.floating-bar {
+  position: fixed; /* Fija el elemento en una posición relativa a la ventana del navegador */
+  bottom: 40px; /* Coloca el elemento 40px arriba del fondo de la ventana */
+  right: 0; /* Coloca el elemento en el lado derecho de la ventana */
+  width: 20px; /* Ancho de la barra */
+  height: 100px; /* Altura de la barra */
+  background: 
+    linear-gradient(
+      to bottom, 
+      #3F567D 0%, #3F567D 30%, 
+      #32A9D4 30%, #32A9D4 80%, 
+      #85C7E0 80%, #85C7E0 100%
+    );
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional para dar profundidad */
+}
+
