@@ -1,0 +1,19 @@
+/*Linea de marca de Cardonabogados*/
+/* FUENTE: Afacad */
+@font-face {
+    font-family: 'Afacad';
+    src: url('../fonts/Afacad-Medium.woff2') format('woff2');
+}
+:root{
+  /* Colores */
+  /* Tema Claro */
+  --color-claro-fondo: #F7F7F7;
+  --color-claro-detalles: #26303E;
+  --color-claro-contraste: #D8D9D7;
+  /* Tema Oscuro */
+  --color-oscuro-fondo: #26303E;
+  --color-oscuro-detalles: #33434F;
+  --color-oscuro-contraste: #D8D9D7;
+}
+
+

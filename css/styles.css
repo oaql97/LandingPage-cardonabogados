@@ -1,0 +1,289 @@
+/* Generalidades  */
+@import url(cardonabogados.css);
+
+/* Estilos Base -----------------------------------------------------------*/
+/* NOTE ---> From skeleton
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+/* Fuentes y Colores */
+html {
+  background-color: var(--color-claro-fondo);
+  font-size: 62.5%;
+  color: var(--color-claro-detalles);
+}
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Afacad", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+label {
+  color: var(--color-claro-detalles);
+}
+.horizontal-line {
+  background-color: var(--color-claro-detalles);
+  height: 1.5px;
+  border: none;
+}
+/* Tema Oscuro */
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-oscuro-fondo);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  label {
+    color: var(--color-oscuro-contraste);
+  }
+  .horizontal-line {
+    background-color: var(--color-oscuro-contraste);
+  }
+}
+/* Logo inicio */
+/* Grid especial Logo */
+.logo-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  overflow: hidden;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60vh;
+  margin-bottom: 1rem;
+}
+.logo-principal path {
+  fill: var(--color-claro-detalles);
+}
+.logo-img,
+.title {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+.logo-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+.title {
+  text-transform: uppercase;
+  display: block;
+  font-size: 8vh;
+}
+/* Variantes dependiendo Tema o Tamaño de pantalla */
+@media (height <= 550px) {
+  .logo-container {
+    padding-top: 0rem;
+  }
+}
+@media (width <= 550px) {
+  .logo {
+    max-width: 30vh;
+  }
+  .title {
+    font-size: 4vh;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .logo-principal path {
+    fill: var(--color-oscuro-contraste);
+  }
+}
+/* --------------------------------------------------------- */
+/* Mini Menu Oficina*/
+a svg {
+  max-height: 50px;
+  min-height: 40px;
+}
+.mini-menu {
+  fill: var(--color-claro-contraste);
+  stroke: var(--color-claro-detalles);
+}
+
+a p {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  color: var(--color-claro-contraste);
+}
+@media (width <= 550px) {
+  .value-props > .value-prop {
+    margin: 2rem;
+  }
+}
+@media (width <= 710px) {
+  .value-props {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .value-props > .value-prop {
+    margin: 1rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .mini-menu {
+    fill: var(--color-oscuro-contraste);
+    stroke: var(--color-oscuro-detalles);
+  }
+}
+/* Cuadricula Servicios Oficina */
+.header {
+  text-align: center;
+}
+.one-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  fill: var(--color-claro-detalles);
+  stroke: var(--color-claro-detalles);
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .icon {
+    fill: var(--color-oscuro-contraste);
+    stroke: var(--color-oscuro-detalles);
+  }
+}
+/* Detalles Oficina*/
+.container h2 {
+  text-align: center;
+}
+.row-text h3 {
+  text-align: center;
+}
+.NAME {
+  text-align: center;
+  font-size: 3.3rem;
+  margin-top: 1rem;
+}
+.detalles-img {
+  width: 95%;
+}
+@media (min-width: 550px) {
+  .row-text {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;
+  }
+  .left {
+    text-align: left;
+  }
+  .right {
+    text-align: right;
+  }
+  .NAME {
+    font-size: 3.7rem;
+  }
+}
+@media (width <= 550px) {
+  .re-order {
+    display: flex;
+    flex-direction: column;
+  }
+  .re-order div:nth-child(1) {
+    order: 2;
+  }
+  .re-order div:nth-child(2) {
+    order: 1;
+  }
+}
+
+/* Tamaños y proporciones */
+.value-img {
+  display: block;
+  text-align: center;
+  margin: 2.5rem auto 0;
+}
+.value-prop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.value-props {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 40px;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  text-align: center;
+}
+.footer-section .logo-principal path {
+  max-width: 100px;
+  fill: var(--color-claro-contraste);
+}
+.footer-section p{
+  color: var(--color-claro-contraste);
+}
+.footer-section h5 {
+  margin: 0 0 20px 0;
+  color: var(--color-claro-contraste);
+}
+
+.footer-section address,
+.footer-section a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 0 10px 0;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    max-width: none;
+    margin-bottom: 20px;
+  }
+}
+@media(width >= 768px){
+.footer-section:last-child{
+  text-align: right;
+}
+}

@@ -7,7 +7,7 @@
  */
 
 html {
-  font-family: 'Roboto',sans-serif; /* 1 */
+  font-family:'Afacad', sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -133,8 +133,7 @@ dfn {
  */
 
 h1 {
-  text-decoration: underline solid #1db3ee 0.13em; /*Subrayado del texto*/
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0.67em 0;
 }
 
@@ -292,7 +291,7 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  /* -webkit-appearance: button; 2 */
   cursor: pointer; /* 3 */
 }
 
@@ -426,11 +425,3 @@ td,
 th {
   padding: 0;
 }
-/* Ajustes Propios
-   ========================================================================== */
-
-.footext{
-  font-size: small;
-  padding-top: 1.5em;
-}
-
