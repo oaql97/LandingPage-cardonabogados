@@ -28,11 +28,6 @@ li,
 label {
   color: var(--color-claro-detalles);
 }
-.horizontal-line {
-  background-color: var(--color-claro-detalles);
-  height: 1.5px;
-  border: none;
-}
 /* Tema Oscuro */
 @media (prefers-color-scheme: dark) {
   html {
@@ -91,6 +86,7 @@ label {
   text-transform: uppercase;
   display: block;
   font-size: 8vh;
+  text-align: center;
 }
 /* Variantes dependiendo Tema o Tamaño de pantalla */
 @media (height <= 550px) {
@@ -174,6 +170,11 @@ a p {
   }
 }
 /* Detalles Oficina*/
+#Quienes_Somos h3,
+#Quienes_Somos p {
+    margin-bottom: 0;
+}
+
 .container h2 {
   text-align: center;
 }
@@ -216,7 +217,14 @@ a p {
     order: 1;
   }
 }
-
+/* Avatar pagina contacto */
+.avatar {
+  width: auto;
+  height: 175px;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;
+}
 /* Tamaños y proporciones */
 .value-img {
   display: block;
@@ -239,7 +247,9 @@ a p {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: 40px;
+  padding-bottom: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 .footer-section {
   display: flex;
@@ -249,41 +259,95 @@ a p {
 }
 .footer-section .logo-principal path {
   max-width: 100px;
-  fill: var(--color-claro-contraste);
+  fill: var(--color-claro-detalles);
 }
-.footer-section p{
-  color: var(--color-claro-contraste);
-}
+.footer-section p,
 .footer-section h5 {
-  margin: 0 0 20px 0;
-  color: var(--color-claro-contraste);
+  color: var(--color-claro-detalles);
+  margin: 0 0 10px 0;
 }
 
 .footer-section address,
 .footer-section a {
-  color: #aaa;
+  color: var(--color-claro-detalles-secundario);
   text-decoration: none;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
-
 .footer-section a:hover {
   text-decoration: underline;
-  color: #fff;
+  color: var(--color--claro-acento);
 }
+a.home:hover,
+a.home:focus {
+  color: var(--color--claro-acento);
+  text-decoration: none;
+}
+a.home:hover .logo-principal path,
+a.home:focus .logo-principal path {
+  fill: var(--color--claro-acento);
+}
+a.home:hover p,
+a.home:focus p {
+  color: var(--color--claro-acento);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .footer-section {
     max-width: none;
     margin-bottom: 20px;
   }
+  .footer div:nth-child(1) {
+    order: 3;
+  }
+  .footer div:nth-child(2) {
+    order: 2;
+  }
+  .footer div:nth-child(3) {
+    order: 1;
+  }
 }
-@media(width >= 768px){
-.footer-section:last-child{
-  text-align: right;
+@media (width >= 768px) {
+  .footer-section:last-child {
+    text-align: right;
+  }
+  .footer-section:first-child {
+    text-align: left;
+  }
 }
+@media (prefers-color-scheme: dark) {
+  .footer-section .logo-principal path {
+    fill: var(--color-claro-contraste);
+  }
+  .footer-section p,
+  .footer-section h5 {
+    color: var(--color-claro-contraste);
+  }
+  .footer-section address,
+  .footer-section a {
+    color: var(--color-oscuro-detalles-secundario);
+  }
+  .footer-section a:hover {
+    color: var(--color--oscuro-acento);
+  }
+  a.home:hover,
+  a.home:focus {
+    color: var(--color--oscuro-acento);
+    text-decoration: underline;
+  }
+  a.home:hover .logo-principal path,
+  a.home:focus .logo-principal path {
+    fill: var(--color--oscuro-acento);
+  }
+  a.home:hover p,
+  a.home:focus p {
+    color: var(--color--oscuro-acento);
+  }
 }

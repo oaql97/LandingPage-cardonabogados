@@ -1,0 +1,54 @@
+/*Variables de entorno */
+@import url(cardonabogados.css);
+
+.button,
+button {  
+  text-decoration: none;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 14px 12px 12px 12px;
+  letter-spacing: 0.1px;
+  white-space: wrap;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+.header > .button.button-default {
+  margin-bottom: 5px;
+} 
+/* Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.icons {
+  padding: 0px 8px 3.5px 0px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+.logo-cardonabogados{
+  padding: 0px 8px 3.5px 0px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+/* Brand Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Default (this is great for your own brand color!) */
+.button-default {
+  max-width: 300px;
+}
+.button-default:hover,.button-default:focus{
+  color: var(--color-claro-contraste);
+}
+@media(prefers-color-scheme: dark){
+  .button-default:hover,.button-default:focus{
+    color: var(--color-oscuro-contraste);
+  }
+}

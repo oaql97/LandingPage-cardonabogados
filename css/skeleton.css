@@ -148,9 +148,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #fbfbfb; }
+  color: var(--color-claro-detalles); }
 a:hover {
-  color: #fbfbfb; }
+  color: var(--color--claro-acento); }
 
 
 /* Buttons
@@ -226,6 +226,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   box-shadow: 0 0 5px var(--color-oscuro-detalles);
+  filter: brightness(90%);
 }
 }
 
@@ -278,7 +279,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #32A9D4;
+  border: 1px solid var(--color--claro-acento);
   outline: 0; }
 label,
 legend {
@@ -298,7 +299,7 @@ label > .label-body {
 
 @media (prefers-color-scheme: dark) {
 .forms{
-  color: #26303E;
+  color: var(--color-oscuro-fondo);
 }
 input[type="email"]:focus,
 input[type="number"]:focus,
@@ -309,7 +310,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #32A9D4;
+  border: 1px solid var(--color--oscuro-acento);
   outline: 0; }
 }
 /* Lists
@@ -401,8 +402,13 @@ form {
 hr {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  background-color: var(--color-claro-detalles);
 }
-
+@media(prefers-color-scheme: dark){
+  hr{
+    background-color: var(--color-oscuro-contraste);
+    }
+}
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
