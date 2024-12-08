@@ -18,3 +18,17 @@ document.addEventListener('scroll', function() {
     var arrow = document.querySelector('.arrow');
     arrow.style.display = window.scrollY > 100 ? 'none' : 'flex';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var footer = document.querySelector('.footer');
+    var logoContainer = document.querySelector('.logo-container');
+
+    // Muestra el footer solo cuando el usuario hace scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) { // Aparece después de 50px de desplazamiento
+            footer.classList.add('visible');
+        } else {
+            footer.classList.remove('visible');
+        }
+    });
+});

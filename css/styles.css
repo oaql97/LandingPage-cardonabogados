@@ -6,6 +6,12 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 /* Fuentes y Colores */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evita scroll horizontal innecesario */
+}
 html {
   background-color: var(--color-claro-fondo);
   font-size: 62.5%;
@@ -27,6 +33,9 @@ p,
 li,
 label {
   color: var(--color-claro-detalles);
+}
+.main-content {
+  padding-bottom: 130px; /* Ajusta según la altura del footer */
 }
 /* Tema Oscuro */
 @media (prefers-color-scheme: dark) {
@@ -244,19 +253,70 @@ a p {
 }
 /*Footer*/
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding-bottom: 20px;
-  padding-left: 150px;
-  padding-right: 150px;
+  position: fixed; /* Fija el footer en la parte inferior */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  background-color: var(--color-claro-fondo); /* Fondo claro */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex; /* Flexbox para distribución */
+  justify-content: space-between; /* Distribuye las secciones uniformemente */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 15px 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+  flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+  opacity: 0; /* Oculto inicialmente */
+  display: none; /* Oculto por defecto */
+  transition: opacity 1s ease-in-out; /* Transición suave */
+  height: 130px;
 }
+
+.footer.visible {
+  display: flex; /* Se muestra al hacer scroll */
+  opacity: 1; /* Totalmente visible */
+}
+
 .footer-section {
+  flex: 1; /* Distribuye las secciones proporcionalmente */
+  text-align: center; /* Centra horizontalmente el contenido */
+  padding: 0 10px; /* Espaciado interno entre secciones */
+  box-sizing: border-box; /* Evita problemas con el ancho */
+}
+
+.footer-section:first-child{
+  text-align: left; /* Alinea el logo a la izquierda */
+  flex: 1; /* Ocupa más espacio */
+}
+
+.footer-section:first-child p {
+  text-align: left; /* Asegura que el texto quede a la izquierda */
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section:last-child {
   display: flex;
-  flex-direction: column;
-  max-width: 200px;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: flex-end; /* Alinea los elementos hacia la derecha */
+  text-align: right; /* Asegura que el texto esté alineado a la derecha */
+  padding: 0 10px; /* Espaciado interno para separarlo del borde */
+}
+
+.footer-section:last-child h5,
+.footer-section:last-child a {
+  margin: 5px 0; /* Espaciado uniforme entre los elementos */
+}
+
+.footer-section h5,
+.footer-section p,
+.footer-section a,
+.footer-section address {
+  margin: 0; /* Elimina márgenes extra */
+  padding: 0;
+  line-height: 1.5; /* Altura de línea para espaciado consistente */
   text-align: center;
 }
+
 .footer-section .logo-principal path {
   max-width: 100px;
   fill: var(--color-claro-detalles);
@@ -299,30 +359,29 @@ a.home:focus p {
     padding-left: 10px;
     padding-right: 10px;
   }
-
+  .footer-section:last-child {
+    
+    align-items: center; /* Centra los elementos en móviles */
+    }
   .footer-section {
     max-width: none;
     margin-bottom: 20px;
-  }
-  .footer div:nth-child(1) {
-    order: 3;
-  }
-  .footer div:nth-child(2) {
-    order: 2;
-  }
-  .footer div:nth-child(3) {
-    order: 1;
+    text-align: center;
   }
 }
-@media (width >= 768px) {
-  .footer-section:last-child {
-    text-align: right;
-  }
+@media (min-width: 769px) {
   .footer-section:first-child {
     text-align: left;
   }
+  .footer-section:last-child {
+    align-items: flex-end; /* Alinea a la derecha en dispositivos grandes */
+    text-align: right;
+}
 }
 @media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: var(--color-oscuro-fondo); /* Fondo oscuro */
+  }
   .footer-section .logo-principal path {
     fill: var(--color-claro-contraste);
   }
