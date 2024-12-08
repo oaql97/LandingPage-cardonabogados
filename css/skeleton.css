@@ -202,7 +202,7 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
   transform: scale(1.1);
   transition: transform 0.2s ease;
-  box-shadow: 0 0 5px var(--color-claro-detalles);
+  box-shadow: 0 0 10px var(--color--claro-acento);
 }
 
 @media (prefers-color-scheme: dark) {
