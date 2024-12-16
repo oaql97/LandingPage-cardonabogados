@@ -369,6 +369,7 @@ a.home:focus p {
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
   .footer {
     height: 100px; /* Reduce la altura */

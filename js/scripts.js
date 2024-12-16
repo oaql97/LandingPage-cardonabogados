@@ -31,16 +31,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var footer = document.querySelector('.footer');
     var logoContainer = document.querySelector('.logo-container');
 
-    // Muestra el footer solo cuando el usuario hace scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) { // Aparece después de 50px de desplazamiento
+    // Función para verificar si hay scroll
+    function checkScrollAvailability() {
+        var pageHeight = document.documentElement.scrollHeight; // Altura total del contenido
+        var viewportHeight = window.innerHeight; // Altura visible de la ventana
+
+        // Si no hay posibilidad de hacer scroll, mostrar el footer
+        if (pageHeight <= viewportHeight) {
+            footer.classList.add('visible');
+        } else {
+            footer.classList.remove('visible');
+        }
+    }
+
+    // Llamar a la función al cargar la página
+    checkScrollAvailability();
+
+    // Evento de scroll: mostrar el footer si el usuario hace scroll
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
             footer.classList.add('visible');
         } else {
             footer.classList.remove('visible');
         }
     });
+
+    // Verificar si el tamaño de la ventana cambia (por ejemplo, al redimensionar)
+    window.addEventListener('resize', checkScrollAvailability);
 });
+
