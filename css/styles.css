@@ -134,10 +134,11 @@ label {
 }
 /* --------------------------------------------------------- */
 /* Mini Menu Oficina*/
-a svg {
+.button svg {
   max-height: 50px;
   min-height: 40px;
 }
+
 .mini-menu {
   fill: var(--color-claro-contraste);
   stroke: var(--color-claro-detalles);
@@ -182,12 +183,34 @@ a p {
 .icon {
   fill: var(--color-claro-detalles);
   stroke: var(--color-claro-detalles);
-  width: 150px;
+  width: auto;
   height: 150px;
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
+.svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+.service-link .icon {
+  width: auto; /* Ajusta según sea necesario */
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.service-link{
+  text-decoration: none
+}
+.detalle{
+  color: var(--color-claro-detalles);
+}
+
 @media (prefers-color-scheme: dark) {
   .icon {
     fill: var(--color-oscuro-contraste);
@@ -286,7 +309,10 @@ a p {
   transition: opacity 1s ease-in-out; /* Transición suave */
   height: 130px;
 }
-
+.home svg{
+  max-height: 50px;
+  min-height: 40px;
+}
 .footer.visible {
   display: flex; /* Se muestra al hacer scroll */
   opacity: 1; /* Totalmente visible */
