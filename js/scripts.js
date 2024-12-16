@@ -1,22 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var arrow = document.querySelector('.arrow');
-    var container = document.querySelector('.container');
+    var miniMenuSection = document.getElementById('mini-menu-section');
 
     // Establece el estado inicial de la flecha
-    arrow.style.display = window.scrollY > 100 ? 'none' : 'flex';
+    toggleArrowVisibility();
 
     // Evento de clic en la flecha
-    arrow.addEventListener('click', function() {
-        // Scroll hacia el contenedor
-        if (container) {
-            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    arrow.addEventListener('click', function () {
+        // Scroll hacia el mini menú
+        if (miniMenuSection) {
+            miniMenuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
-});
 
-document.addEventListener('scroll', function() {
-    var arrow = document.querySelector('.arrow');
-    arrow.style.display = window.scrollY > 100 ? 'none' : 'flex';
+    // Evento para ocultar la flecha al hacer scroll
+    document.addEventListener('scroll', toggleArrowVisibility);
+
+    // Función para alternar la visibilidad de la flecha
+    function toggleArrowVisibility() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        var miniMenuTop = miniMenuSection.offsetTop;
+
+        if (scrollTop >= miniMenuTop - 100) {
+            // Oculta la flecha si el scroll llega cerca del mini menú
+            arrow.style.display = 'none';
+        } else {
+            // Muestra la flecha si está antes del mini menú
+            arrow.style.display = 'flex';
+        }
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
