@@ -6,7 +6,8 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 /* Fuentes y Colores */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -196,7 +197,7 @@ a p {
 /* Detalles Oficina*/
 #Quienes_Somos h3,
 #Quienes_Somos p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .container h2 {
@@ -298,7 +299,7 @@ a p {
   box-sizing: border-box; /* Evita problemas con el ancho */
 }
 
-.footer-section:first-child{
+.footer-section:first-child {
   text-align: left; /* Alinea el logo a la izquierda */
   flex: 1; /* Ocupa más espacio */
 }
@@ -333,9 +334,10 @@ a p {
 }
 
 .footer-section .logo-principal path {
-  max-width: 100px;
+  width: 100px;
   fill: var(--color-claro-detalles);
 }
+
 .footer-section p,
 .footer-section h5 {
   color: var(--color-claro-detalles);
@@ -369,19 +371,31 @@ a.home:focus p {
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 100px; /* Reduce la altura */
+    padding: 10px 15px; /* Reduce el espacio interno */
+    flex-wrap: wrap; /* Permite ajustar elementos en filas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Asegura que el texto se centre */
   }
   .footer-section:last-child {
-    
-    align-items: center; /* Centra los elementos en móviles */
-    }
+    align-items: right; /* Centra los elementos en móviles */
+  }
   .footer-section {
-    max-width: none;
-    margin-bottom: 20px;
-    text-align: center;
+    width: 100%; /* Cada sección ocupa todo el ancho */
+    margin-bottom: 10px; /* Espacio entre secciones */
+  }
+  .footer-section address{
+    display: none;
+  }
+  .footer-section a,
+  .footer-section h5 {
+    font-size: 11px; /* Reduce el tamaño de fuente */
+  }
+  .footer-section .logo-principal{
+    width: 80px;
+  }
+  .mini-menu-container{
+    height: calc(100vh - 160px); 
   }
 }
 @media (min-width: 769px) {
@@ -391,7 +405,7 @@ a.home:focus p {
   .footer-section:last-child {
     align-items: flex-end; /* Alinea a la derecha en dispositivos grandes */
     text-align: right;
-}
+  }
 }
 @media (prefers-color-scheme: dark) {
   .footer {

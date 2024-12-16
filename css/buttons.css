@@ -13,7 +13,7 @@
 .arrow svg {
   width: 100%;
   height: 100%;
-  animation: parpadeo 1.5s infinite;
+  animation: parpadeo-bounce 1.5s infinite;
 }
 
 .arrow path {
@@ -24,17 +24,17 @@
   stroke-linejoin: round;
 }
 
-@keyframes parpadeo {
-  0% {
+@keyframes parpadeo-bounce {
+  0%, 100% {
     opacity: 1;
+    transform: translateY(0); /* Posición inicial */
   }
   50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
+    opacity: 0.5; /* Opacidad reducida */
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
   }
 }
+
 /* Tema Oscuro */
 @media (prefers-color-scheme: dark) {
   .arrow path {
