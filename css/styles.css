@@ -216,6 +216,9 @@ a p {
     fill: var(--color-oscuro-contraste);
     stroke: var(--color-oscuro-detalles);
   }
+  .detalle{
+    color: var(--color-oscuro-contraste);
+  }
 }
 /* Detalles Oficina*/
 #Quienes_Somos h3,
